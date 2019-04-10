@@ -1,0 +1,157 @@
+
+#track_profiles_div {
+    position: absolute;
+    left: var(--profiles-left);
+    top: var(--profiles-top);
+    width: 540px;
+    height: 600px;
+    box-shadow: 5px 5px 5px 5px #888888;
+    border-width: 1px;
+}
+
+
+.axis_text {
+    fill: black;
+}
+
+/* VELOCITY */
+/* ==================================================== */
+#velocity_plog_g {
+    z-index: 9999;
+}
+#velocity_plot_g_background {
+    fill: white;
+    height: 200px;
+    width: 400px;
+}
+
+#velocity_legend_rect {
+    fill: transparent;
+    height: 80px;
+    width: 200px;
+}
+
+#velocity_interaction_g {
+    opacity: 0.0;
+    height: 200px;
+    width: 400px;
+}
+
+
+
+/* LINES */
+/* --------------------------- */
+#vx_profile_line {
+    fill: none;
+    stroke: #ff3400;
+    stroke-width: 6px;
+}
+
+#vy_profile_line {
+    fill: none;
+    stroke: #002fff;
+    stroke-width: 6px;
+}
+/* --------------------------- */
+
+
+
+
+/* MARKS */
+/* --------------------------- */
+#vx_mouseover_profile_mark {
+    fill: #ff3400;
+    stroke: black;
+}
+
+#vy_mouseover_profile_mark {
+    fill: #002fff;
+    stroke: black;
+}
+/* --------------------------- */
+
+
+
+/* MOUSEOVER LINE */
+/* --------------------------- */
+#velocity_plot_mouseover_x_axis_mark {
+    stroke : #8000ff;
+    stroke-opacity: 0.25;
+    stroke-width : 4px;
+    opacity : 0.0;
+}
+
+.plot_mouseover_profile_mark {
+    fill: #8000ff;
+    fill-opacity: 0.2;
+    stroke: #8000ff;
+}
+
+
+
+
+/* --------------------------- */
+
+
+
+/* LEGEND */
+/* --------------------------- */
+#vx_legend_mark_line {
+    stroke: #ff3400;
+    stroke-width: 3px;
+}
+
+#vy_legend_mark_line {
+    stroke: #002fff;
+    stroke-width: 3px;
+}
+
+#vx_legend_mark {
+    fill: #ff3400;
+    stroke: black;
+}
+
+#vy_legend_mark {
+    fill: #002fff;
+    stroke: black;
+}
+
+.velocity_legend_text {
+    stroke: black;
+    fill: black;
+}
+/* --------------------------- */
+/* ==================================================== */
+/* ==================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* INTENSITY */
+/* ==================================================== */
+#intensity_interaction_g {
+    opacity: 0.0;
+    height: 200px;
+    width: 400px;
+}
+
+#intensity_profile_line {
+    fill: none;
+    stroke: #00ff00;
+    stroke-width: 6px;
+}
+
+#intensity_mouseover_profile_mark {
+    fill: #00ff00;
+    stroke: black;
+}

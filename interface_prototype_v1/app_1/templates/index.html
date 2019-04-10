@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <title> CAMP-SMC </title>
+
+        <meta charset="utf-8">
+
+
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
+
+        <!-- Set favicon -->
+        <link rel="icon" href="/static/icons/smc_favicon.ico">
+
+
+
+        <!-- ==================================================================== -->
+        <!-- =================              CSS                 ================= -->
+        <!-- ==================================================================== -->
+
+        <!-- Custom Style Sheets -->
+        <!-- =================== -->
+        <link rel="stylesheet" href="/static/css/root.css">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="/static/css/satellite_view.css">
+        <link rel="stylesheet" href="/static/css/local_context_view.css">
+        <link rel="stylesheet" href="/static/css/global_context_view.css">
+        <link rel="stylesheet" href="/static/css/pipeline.css">
+        <link rel="stylesheet" href="/static/css/control_menu.css">
+        <link rel="stylesheet" href="/static/css/sliders.css">
+        <link rel="stylesheet" href="/static/css/stream.css">
+        <link rel="stylesheet" href="/static/css/profiles.css">
+
+        <link rel="stylesheet" href="/static/css/uncertainty_vis.css">
+
+
+        <!-- Library Style Sheets -->
+        <link rel="stylesheet" href="/static/css/lib/bootstrap-3.1.1.min.css">
+        <link rel="stylesheet" href="/static/css/lib/bootstrap-theme-3.1.1.css">
+        <link rel="stylesheet" href="/static/css/lib/normalize.css">
+        <link rel="stylesheet" href="/static/css/lib/skeleton.css">
+        <link rel="stylesheet" href="/static/css/lib/nv.d3.css">
+        <link rel="stylesheet" href="/static/css/lib/vis-network.min.css">
+
+
+
+
+        <!-- ==================================================================== -->
+        <!-- =================          JAVASCRIPT              ================= -->
+        <!-- ==================================================================== -->
+
+        <!-- Library JS scripts -->
+        <!-- ================== -->
+        <script src="/static/js/lib/jquery-3.2.1.min.js"></script>
+        <script src="/static/js/lib/jquery-ui.js"></script>
+        <script src="/static/js/lib/tether.min.js"></script>
+        <script src="/static/js/lib/bootstrap.min.js"></script>
+        <script src="/static/js/lib/jquery.shapeshift.min.js"></script>
+        <script src="/static/js/lib/d3.min.js"></script>
+        <script src="/static/js/lib/nv.d3.min.js"></script>
+        <script src="/static/js/lib/vis.min.js"></script>
+        <script src="/static/js/lib/spin.js"></script>
+        <script src="/static/js/lib/d3-hsv.min.js"></script>
+        <script src="/static/js/lib/topojson.v1.min.js"></script>
+        <script src="/static/js/lib/tile-0.0.4.js"></script>
+        <script src="/static/js/lib/pouchdb-6.3.4.min.js"></script>
+
+
+        <!-- Open Layers Map -->
+        <script src="https://openlayers.org/en/v4.2.0/build/ol.js"></script>
+
+
+        <!-- Custom JS scripts -->
+        <!-- ================= -->
+        <script src="/static/js/usr/initialize.js"></script>
+        <script src="/static/js/usr/helper_functions.js"></script>
+
+
+        <!-- MAIN APP -->
+        <script src="/static/js/usr/AppModel.js"></script>
+        <script src="/static/js/usr/AppView.js"></script>
+        <script src="/static/js/usr/AppController.js"></script>
+
+
+        <!-- REGION -->
+        <script src="/static/js/usr/RegionController.js"></script>
+
+        <!-- CONTROL MENU -->
+        <script src="/static/js/usr/control_menu/ControlMenuModel.js"></script>
+        <script src="/static/js/usr/control_menu/ControlMenuView.js"></script>
+        <script src="/static/js/usr/control_menu/ControlMenuController.js"></script>
+
+        <!-- PIPELINE -->
+        <script src="/static/js/usr/pipeline/PipelineModel.js"></script>
+        <script src="/static/js/usr/pipeline/PipelineView.js"></script>
+        <script src="/static/js/usr/pipeline/PipelineController.js"></script>
+
+        <!-- STREAM -->
+        <script src="/static/js/usr/stream/StreamModel.js"></script>
+        <script src="/static/js/usr/stream/StreamView.js"></script>
+        <script src="/static/js/usr/stream/StreamController.js"></script>
+
+
+        <!-- PLAYBACK-->
+        <script src="/static/js/usr/playback/PlaybackModel.js"></script>
+        <script src="/static/js/usr/playback/PlaybackView.js"></script>
+        <script src="/static/js/usr/playback/PlaybackController.js"></script>
+
+
+        <!-- PROFILE -->
+        <script src="/static/js/usr/visualizations/profile_vis/ProfileModel.js"></script>
+        <script src="/static/js/usr/visualizations/profile_vis/ProfileView.js"></script>
+        <script src="/static/js/usr/visualizations/profile_vis/ProfileController.js"></script>
+
+        <!-- velocity -->
+        <script src="/static/js/usr/visualizations/profile_vis/velocity/VelocityProfileModel.js"></script>
+        <script src="/static/js/usr/visualizations/profile_vis/velocity/VelocityProfileView.js"></script>
+        <script src="/static/js/usr/visualizations/profile_vis/velocity/VelocityProfileController.js"></script>
+
+
+        <!-- intensity -->
+        <script src="/static/js/usr/visualizations/profile_vis/intensity/IntensityProfileModel.js"></script>
+        <script src="/static/js/usr/visualizations/profile_vis/intensity/IntensityProfileView.js"></script>
+        <script src="/static/js/usr/visualizations/profile_vis/intensity/IntensityProfileController.js"></script>
+
+
+        <!-- SATELLITE CONTEXT -->
+        <script src="/static/js/usr/visualizations/satellite_vis/SatelliteModel.js"></script>
+        <script src="/static/js/usr/visualizations/satellite_vis/SatelliteView.js"></script>
+        <script src="/static/js/usr/visualizations/satellite_vis/SatelliteController.js"></script>
+
+
+        <!-- LOCAL CONTEXT -->
+        <script src="/static/js/usr/visualizations/local_context/track_list/TrackList.js"></script>   <!-- Must be loaded first! -->
+        <script src="/static/js/usr/visualizations/local_context/auto_release/AutoRelease.js"></script>   <!-- Must be loaded first! -->
+        <script src="/static/js/usr/visualizations/local_context/LocalContextModel.js"></script>
+        <script src="/static/js/usr/visualizations/local_context/LocalContextView.js"></script>
+        <script src="/static/js/usr/visualizations/local_context/LocalContextController.js"></script>
+
+
+
+        <!-- GLOBAL CONTEXT -->
+        <script src="/static/js/usr/visualizations/global_context/GlobalContextModel.js"></script>
+        <script src="/static/js/usr/visualizations/global_context/GlobalContextView.js"></script>
+        <script src="/static/js/usr/visualizations/global_context/GlobalContextController.js"></script>
+
+        <!-- KALMAN FILTER -->
+        <script src="/static/js/usr/visualizations/kalman_filter/KalmanModel.js"></script>
+        <script src="/static/js/usr/visualizations/kalman_filter/KalmanView.js"></script>
+        <script src="/static/js/usr/visualizations/kalman_filter/KalmanController.js"></script>
+
+
+        <!-- UNCERTAINTY VIS -->
+        <script src="/static/js/usr/visualizations/uncertainty_vis/UncertaintyVisModel.js"></script>
+        <script src="/static/js/usr/visualizations/uncertainty_vis/UncertaintyVisView.js"></script>
+        <script src="/static/js/usr/visualizations/uncertainty_vis/UncertaintyVisController.js"></script>
+
+    </head>
+
+    <body>
+        <h1 id="test_tag"> </h1>
+
+    <audio id="myAudio">
+        <source src="/static/audio/biometrics.mp3" type="audio/mpeg">
+    </audio>
+
+
+    </body>
+
+</html>

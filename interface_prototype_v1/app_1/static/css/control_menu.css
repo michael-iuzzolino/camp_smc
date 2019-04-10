@@ -1,0 +1,7 @@
+#controls_menu_div {
+    position: absolute;
+}
+
+#controls_menu_svg {
+    z-index: 0;
+}

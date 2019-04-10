@@ -1,0 +1,75 @@
+#main_div {
+    position: absolute;
+    left: 100px;
+}
+
+
+#main_title {
+    position: relative;
+    left: 80%;
+    font-style: oblique;
+    font-family: unset;
+}
+
+#play_button {
+    width: 95% !important;
+}
+
+
+#playback_controls_div {
+    position: absolute;
+    width: 200px;
+    height: 275px;
+    top: var(--playback-controller-top);
+    left: var(--playback-controller-left);
+    box-shadow: 5px 5px 5px #888888;
+    border: 1px solid;
+    padding: 0px 10px 0px 10px;
+    text-align: center;
+}
+
+#playback_controls_div h1 {
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+input[type=button]:hover {
+    background-color: #f2e6ff;
+    border-color: #8000ff;
+    text-decoration: underline;
+    cursor: select;
+}
+
+
+body {
+    /*background-color: rgba(153, 166, 177, 0.3) !important;*/
+    background-color: rgba(253, 253, 253, 0.9) !important;
+}
+
+
+.spinner_div {
+    position: absolute;
+    width: var(--local-context-width);
+    height: var(--primary-view-height);
+    left: var(--shared-left);
+    top: var(--local-context-top);
+    text-align: center;
+    margin-left: 105px;
+}
+
+.spinner {
+    position: absolute;
+    margin: 0 auto;
+    left: 400px;
+}
+
+
+
+
+
+
+

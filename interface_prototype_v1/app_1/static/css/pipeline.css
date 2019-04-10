@@ -1,0 +1,50 @@
+#pipeline_controls_div {
+    position: absolute;
+    /*border-right: 1px solid black;*/
+    left: var(--pipeline-left);
+    top: var(--pipeline-top);
+    width: 900px;
+    height: 200px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#pipeline_controls_header {
+    position: absolute;
+    font-size: 24px;
+    top: -40px;
+    width: 100%;
+}
+
+#pipeline_filter_display_div {
+    position: absolute;
+    left: var(--filter-left);
+    top: var(--filter-top);
+    height: 300px;
+}
+
+#filter_controls_div h1 {
+    font-size: 24px !important;
+}
+
+#filter_controls_div {
+    height: 300px;
+    padding: 10px 25px 10px 25px;
+}
+
+.filter_label {
+    font-size: 80%;
+    width: 160px;
+    vertical-align: middle;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+.filter_checkbox {
+    position: relative;
+    vertical-align: middle;
+    float: left;
+    transform: scale(1.2, 1.2);
+    top: 0px;
+    left: -8px;
+}

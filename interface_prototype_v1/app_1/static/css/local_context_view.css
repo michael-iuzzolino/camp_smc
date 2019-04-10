@@ -1,0 +1,647 @@
+
+/* PRIMARY CONTAINER */
+/*------------------------------------------------------------------*/
+#primary_view_div {
+    cursor: crosshair;
+    position: absolute;
+    width: var(--local-context-width);
+    height: var(--primary-view-height);
+    left: var(--shared-left);
+    top: var(--local-context-top);
+    box-shadow: 5px 5px 5px 5px #888888;
+
+
+    transition: width 1s;
+}
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+
+
+/* Track Listing Container */
+/*------------------------------------------------------------------*/
+#track_listing_div {
+
+    position: relative;
+    visibility: hidden;
+    height: 0;
+    width: var(--track-list-width);
+    float: left;
+    border-left: 1px solid;
+    border-color: rgba(0, 0, 0, 0.2);
+    cursor: default;
+
+    /*transition-delay: 3s;*/
+    transition: height 1s, top 1s, bottom 1s, visibility 1s;
+}
+
+
+
+/* HEADER */
+.track_list_header_div {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.track_list_header {
+    font-size: 24px;
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    border-bottom: 3px solid;
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* COLOR KEYS */
+/*------------------------------------------------------------------*/
+
+/* COLOR KEY CONTROLLER */
+/*------------------------------------------------------------------*/
+#local_context_controls__color_key_container {
+    margin: auto;
+    right: 0;
+    bottom: 0;
+    opacity: 1.0;
+}
+/*------------------------------------------------------------------*/
+
+#local_context_controls__color_key_button_container {
+    position: absolute;
+    width: 200px;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background-color);
+    border-radius: 25px 0px 0px 0px;
+    border: 1px solid black;
+    padding: 5%;
+    padding-top: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    height: 10px;
+}
+
+.main_track_color_key_div {
+    display: block;
+
+    text-align: center;
+    background-color: rgba(248, 248, 255, 1.0);
+    border-radius: 0px 0px 25px 25px;
+    border: 1px solid black;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+#color_key_button {
+    position: static;
+    bottom: 0;
+    margin-bottom: 4px;
+    background: rgba(240, 240, 245, 0.75);
+}
+
+
+.color_keys_header_div {
+
+}
+
+
+.track_list_key_box_divs {
+    height: 0;
+    overflow: hidden;
+    transition: height 1s, top 1s;
+    z-index: 9999;
+}
+
+/* Individual Track Color Key Divs */
+.track_color_key_div {
+    text-align: left;
+    display: inline-block;
+}
+
+.color_key_title {
+    text-align: center;
+    display: inline;
+    /*margin-left: 20%;*/
+    margin-bottom: 0;
+    /*padding-bottom: 5px;*/
+    padding-bottom: 0;
+}
+
+.color_key_svg {
+    display: inline;
+    float: right;
+    margin-right: 50%;
+}
+
+.color_key_svg rect {
+
+}
+
+.key_not_classified {
+    fill: rgba(255, 0, 0, 0.2);
+    stroke: "black";
+}
+
+.key_track {
+    fill: rgba(0, 255, 0, 0.2);
+    stroke: "black";
+}
+
+.key_ignore {
+    fill: rgba(0, 0, 0, 0.1);
+    stroke: "black";
+}
+
+
+.key_track_AUTO {
+    fill: rgba(164, 255, 255, 0.6);
+    stroke: "black";
+}
+
+.key_ignore_AUTO {
+    fill: rgba(0, 0, 255, 0.2);
+    stroke: "black";
+}
+
+.key_hover_select {
+    fill: rgba(255, 157, 23, 0.5);
+    stroke: "black";
+}
+/*------------------------------------------------------------------*/
+
+
+
+/* LIST */
+/*------------------------------------------------------------------*/
+#main_tracks_container {
+    margin-top: 20px;
+    overflow: hidden;
+    min-height: 200px;
+}
+
+
+.track_main_header_container {
+    text-align: center;
+    border: 5px solid;
+    border-color: rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+/* ACTIVE */
+/*-----------------------------*/
+#main_active_tracks_container {
+    position: relative;
+    text-align: center;
+}
+
+#active_track_main_header_container {
+    background-color: rgba(0, 255, 0, 0.4);
+}
+
+
+#active_track_list_header {
+    display: inline-block;
+    text-align: center;
+    font-size: 0px;
+}
+
+
+#active_track_list_header h1 {
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.show_active_tracks_button {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+#active_track_list_container {
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+    overflow: auto;
+    height: 0;
+    transition: height 1s;
+}
+/*-----------------------------*/
+
+
+
+/* INACTIVE */
+/*-----------------------------*/
+#main_inactive_tracks_container {
+    position: relative;
+    text-align: center;
+}
+
+#inactive_track_main_header_container {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+#inactive_track_list_header {
+    display: inline-block;
+    text-align: center;
+    font-size: 0px;
+}
+
+
+#inactive_track_list_header h1 {
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.show_inactive_tracks_button {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+#inactive_track_list_container {
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+    overflow: auto;
+    height: 0;
+    transition: height 1s;
+}
+/*-----------------------------*/
+
+
+.track_list_ul {
+    text-align: center;
+    font-size: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+.track_list_ul li {
+    display: block;
+    list-style-type: none;
+    font-size: 20px;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+
+.track_classification_selection_and_info_div {
+    height: 0;
+    overflow: hidden;
+    transition: height 1s;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+.track_info_selection_div {
+
+}
+
+.track_info_button {
+    position: relative;
+    top: -50px;
+
+}
+
+#show_more_button {
+    text-align: center;
+    position: relative;
+    float: right;
+    top: 10px;
+    margin: 0 150 auto;
+
+}
+
+
+.track_list_mouseover {
+    background: rgba(255, 157, 23, 0.35);
+    border: 1px solid;
+    border-color: rgba(255, 157, 23, 1.0);
+}
+
+
+
+.track_list_SHOW_PROFILE_button {
+    background-color: rgba(255, 157, 23, 0.25) !important;
+ }
+
+.track_list_SHOW_PROFILE_li_container {
+    background-color: rgba(255, 157, 23, 0.65) !important;
+    border-color: rgba(0, 255, 0, 0.6) !important;
+    border: 5px !important;
+}
+
+.track_list_selecting_classification {
+    border: 1px solid;
+    border-color: rgba(0, 255, 0, 0.6);
+}
+
+
+.track_list_inactive {
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: default;
+}
+
+
+/* LIST OBJECT Classification coloring */
+
+.track_list_not_classified {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.track_list_track {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+.track_list_track_AUTO {
+    background-color: rgba(164, 255, 255, 0.6);
+}
+
+.track_list_ignore {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.track_list_ignore_AUTO {
+    background-color: rgba(0, 0, 255, 0.2);
+}
+
+
+/* INACTIVE */
+/* LIST OBJECT Classification coloring */
+.track_list_base_inactive {
+    border: 3px solid !important;
+    border-color: rgba(0, 0, 0, 0.5) !important;
+    font-size: 14px !important;
+}
+
+.track_list_not_classified_INACTIVE {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.track_list_track_INACTIVE {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+.track_list_track_AUTO_INACTIVE {
+    background-color: rgba(164, 255, 255, 0.6);
+}
+
+.track_list_ignore_INACTIVE {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.track_list_ignore_AUTO_INACTIVE {
+    background-color: rgba(0, 0, 255, 0.2);
+}
+
+
+
+.form_select_disabled {
+    background-color: #dddddd;
+}
+
+.AR_region_select_ACTIVE {
+    background-color: rgba(0, 255, 0, 0.35);
+    border: 1px solid orange !important;
+}
+/*------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  DISCRIMINATION CONTROLS (STAGE 5) CONTAINER   */
+/*------------------------------------------------------------------*/
+
+
+/* AUTO */
+/*--------------------------------*/
+#local_context_controls__auto_discrim_controls_container {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    bottom: 0;
+    background-color: var(--background-color);
+    border-radius: 0px 25px 0px 0px;
+    opacity: 0.75;
+    border: 1px solid black;
+    padding: 5%;
+    padding-top: 2.5%;
+    padding-left: 2.5%;
+    height: 35%;
+    text-align: center;
+}
+
+
+
+#local_context__auto_discrim_form {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+#AR_list_container {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#AR_list_auto_track_form {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+#AR_list_ignore_form {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+/*------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  REGION NAME OVERLAY CONTAINER   */
+/*------------------------------------------------------------------*/
+#local_context_region_name_container {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    background-color: var(--background-color);
+    border-radius: 0px 0px 25px 0px;
+    opacity: 0.75;
+    border: 1px solid #9acfea;
+    padding: 5%;
+    padding-top: 2.5%;
+    padding-left: 2.5%;
+    height: 10%;
+    width: 35%;
+}
+
+#local_context_region_name_text {
+    position: absolute;
+    font-size : 22px;
+    top: 5px;
+}
+
+#local_context_region_name_container p {
+    position: absolute;
+    top: 35px;
+    font-size : 16px;
+}
+/*------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  COORDINATES OVERLAY CONTAINER   */
+/*------------------------------------------------------------------*/
+#local_context_controls__mouseover_coords_container {
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    padding: 10px;
+}
+
+#local_coordinates_mouse_position {
+    position: relative;
+    font-size : 26px;
+}
+/*------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  BUTTONS CONTAINER   */
+/*------------------------------------------------------------------*/
+
+/* RESET VIEW */
+/*--------------------------------*/
+#local_context_controls__center_button_container {
+    top: 0;
+    float: left;
+    position: absolute;
+    left: 50%;
+}
+
+#local_context__reset_view_button {
+    position: relative;
+    background-color: ghostwhite;
+    opacity: 0.8;
+    float: left;
+    left: -50%;
+    margin-top: 10px;
+}
+/*--------------------------------*/
+
+
+/* SATELLITE CONTEXT BOX (hide/show) */
+/*--------------------------------*/
+#local_context__satellite_context_box_button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: ghostwhite;
+    opacity: 0.8;
+    margin-top: 10px;
+    margin-right: 20px;
+
+}
+
+/*--------------------------------*/
+/*------------------------------------------------------------------*/
+
+
+
+
+
+/*  Main Sat/Local Context div   */
+/*------------------------------------------------------------------*/
+#satellite_and_local_context_div {
+    position: relative;
+    display: inline;
+    cursor: crosshair;
+    float: left;
+    width: var(--local-context-width);
+    height: var(--primary-view-height);
+}
+
+
+#local_context_main_div {
+    position: absolute;
+    width: var(--local-context-width);
+    height: var(--local-context-height);
+}
+/*------------------------------------------------------------------*/
+
+
+
+#probability_vis_div {
+    position: absolute;
+    top: 820px;
+    left: 1840px;
+}

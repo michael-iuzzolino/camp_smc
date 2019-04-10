@@ -1,0 +1,60 @@
+:root {
+
+    /* Shared Top */
+    --shared-top: 200px;
+    --shared-left: 10px;
+
+    /* Primary View Width */
+    --primary-view-height: 540px;
+    --primary-view-width: 1100px;
+
+    /* Local Context / Satellite Vis */
+    --local-context-height: 540px;
+    --local-context-width: 840px;
+
+    --local-context-left: 250px;
+    --local-context-top: var(--shared-top);
+
+    /* Track List */
+    --track-list-width: 260px;
+
+    /* Global Context */
+    --global-context-height: 540px;
+    --global-context-width: 940px;
+
+    --global-context-left: 890px;
+    --global-context-top: var(--shared-top);
+
+
+
+    /* Pipeline */
+    --pipeline-top: 800px;
+    --pipeline-left: -30px;
+
+    /* Pipeline Filters */
+    --filter-top: 750px;
+    --filter-left: 835px;
+
+
+    /* Local/Global Context Overlay Background Color */
+    --background-color: rgba(248, 248, 255, 0.5);
+
+
+    /* Stream */
+    --stream-controller-top: 0px;
+    --stream-controller-left: 950px;
+
+
+    /* Playback */
+    --playback-controller-top: 268px;
+    --playback-controller-left: 950px;
+
+
+    /* Uncertainty Ellipses */
+    --ellipses-top: 800px;
+    --ellipses-left: 1250px;
+
+    /* Profiles */
+    --profiles-top: 800px;
+    --profiles-left: 1150px;
+}

@@ -1,0 +1,87 @@
+.stream_control_div {
+    position: absolute;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 5px 5px 5px #888888;
+    width: 200px;
+    height: 225px;
+    text-align: center;
+    top: var(--stream-controller-top);
+    left: var(--stream-controller-left);
+
+    padding: 0px 5px 0px 5px;
+}
+
+
+
+
+
+.stream_control_div h1, #filter_controls_div h1, h1 {
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    vertical-align: bottom;
+    text-align: center;
+
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+#stream_control_header {
+    position: relative;
+    font-size: 24px;
+}
+
+#stream_region_name_title {
+    position: relative;
+    font-size: 24px;
+}
+
+
+.clear_image_button {
+    width: 95%;
+}
+
+/*  STREAM BUTTON  */
+/*---------------------------------------------*/
+.stream_button {
+    width: 95%;
+}
+
+.stream_button_OFF {
+    border-color: #00ff00;
+    opacity: 1.0;
+    background-color: #e6fff7;
+}
+
+
+.stream_button_ON {
+    border-color: #00ccff;
+    opacity: 0.55;
+    background-color: #e6f7ff;
+}
+
+.stream_button_ENDED {
+    border-color: rgba(0, 255, 0, 1.0);
+    background-color: rgba(230, 255, 247, 1.0);
+}
+
+.stream_button_PAUSED {
+    border-color: rgba(102, 102, 255, 1.0);
+    background-color: rgba(230, 230, 255, 1.0);
+}
+
+.stream_button_ON {
+    border-color: rgba(0, 204, 255, 1.0);
+    background: rgba(230, 247, 255, 0.55);
+}
+/*---------------------------------------------*/
+
+
+
+#reset_stream_tooltip {
+    position: absolute;
+    top: 800px;
+    left: var(--stream-controller-left);
+}

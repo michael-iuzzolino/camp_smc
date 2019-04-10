@@ -1,0 +1,1 @@
+{"dropout": true, "model_filepath": "models/final_model.ckpt", "architecture": {"cell_type": "GRU", "n_classes": 25, "max_seq_length": 100, "eta": 0.01, "n_inputs": 1, "layer_architecture": [32, 32]}, "dropout_prob": 0.5}

@@ -1,0 +1,1 @@
+{"cell_type": "GRU", "n_classes": 25, "seq_length": 100, "eta": 0.01, "n_inputs": 1, "layer_architecture": [32, 32]}

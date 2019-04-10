@@ -1,0 +1,7 @@
+**/*.pyc
+**/.DS_Store
+**/.idea
+/app_venv
+
+*.hdf5
+*.h5

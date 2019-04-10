@@ -1,0 +1,65 @@
+#main_uncertainty_container {
+    visibility: hidden;
+    position: absolute;
+    left: -800px;
+    top: 280px;
+}
+
+.uncertainty_color_key_g {
+    cursor: pointer;
+}
+
+#uncertainty_centroid_tooltip_text {
+    opacity: 0.0;
+}
+
+#ellipse_svg_g, #uncertainty_centroid_label {
+    cursor: pointer;
+}
+
+#uncertainty_ellipses_div {
+    position: absolute;
+    left: calc(var(--ellipses-left) - 200px);
+    top: var(--ellipses-top);
+}
+
+
+#uncertainty_vis_map_div {
+    position: absolute;
+    top: var(--ellipses-top);
+    left: var(--ellipses-left);
+    border: 1px solid black;
+    height: 400px;
+    width: 400px;
+}
+
+
+#ellipse_text_container {
+    position: absolute;
+    bottom: 0px;
+    left: 200px;
+}
+
+.velocity_vec_style {
+    stroke: rgba(0, 0, 255, 0.5);
+    stroke-width: 10px;
+    fill: none;
+    stroke-linecap : round;
+}
+
+.ellipse_highlight {
+    opacity: 1.0;
+    stroke: rgba(84, 39, 143, 0.8);
+    stroke-width: 2px;
+    transition: stroke 1s, opacity 1s;
+}
+
+
+#uncertainty_key {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#velocity_vector_key {
+    font-weight: bold;
+}

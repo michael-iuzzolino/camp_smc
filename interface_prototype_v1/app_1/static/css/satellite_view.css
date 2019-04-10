@@ -1,0 +1,67 @@
+#satellite_view_container_div {
+    position: absolute;
+    width: var(--local-context-width);
+    height: var(--local-context-height);
+}
+
+
+#satellite_view_div {
+    position: relative;
+}
+
+
+
+.satellite_view_div_BOULDER {
+    left: 291px;
+    top: 137px;
+}
+
+.sat_canvas_div_BOULDER {
+    width: 260px;
+    height: 260px;
+}
+
+
+
+
+.satellite_view_div_ISRAEL {
+    left: 260px;
+    top: 109px;
+}
+
+.sat_canvas_div_ISRAEL {
+    width: 323px;
+    height: 323px;
+}
+
+
+
+.satellite_view_div_NK {
+    left: 250px;
+    top: 100px;
+}
+
+.sat_canvas_div_NK {
+    width: 340px;
+    height: 340px;
+}
+
+
+
+
+
+
+
+#satellite_view_svg {
+    position: relative;
+    left: 45px;
+}
+
+#satellite_view_background_svg {
+    fill: transparent;
+}
+
+#satellite_canvas_div {
+    position: absolute;
+    z-index: 0;
+}
